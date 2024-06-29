@@ -51,7 +51,8 @@ jobs:
         python -m flake8 backend/
         cd backend/
         python manage.py test
-    # Собрать и отправить образ приложения на Docker Hub
+  
+  # Собрать и отправить образ приложения на Docker Hub
   build_and_push_to_docker_hub:
     name: Push Docker image to DockerHub
     runs-on: ubuntu-latest
@@ -111,6 +112,7 @@ jobs:
       run: |
         cd frontend/
         npm run test
+
   build_frontend_and_push_to_docker_hub:
     name: Push frontend Docker image to DockerHub
     runs-on: ubuntu-latest
